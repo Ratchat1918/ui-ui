@@ -7,7 +7,7 @@ body{
     background-color: pink;
 }
 img{
-    width: max(400px, 50vh);
+    width: max(300px, 30vh);
     cursor: pointer;  
 }
 .envelope:hover{
