@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+    <audio id="audioPlayer1" src="Feline_Call.mp3">
+    </audio>
+    <audio id="audioPlayer2">
+        <source src="Meow-sic.mp3" type="audio">
+    </audio>
+    <audio id="audioPlayer3">
+        <source src="happy birthday song.mp3" type="audio">
+    </audio>
+    <h1>У вас новое письмо</h1>
+    <img class="envelope" id="image" src="envelope.png">
+</body>
+<script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+<script>
+    document.getElementById("image").addEventListener("click", () => {
+        document.getElementById("body").innerHTML = `
+            <img src="mombd2026.gif">
+            <audio id="audioPlayer1" src="Feline_Call.mp3"></audio>
+            <audio id="audioPlayer2" src="Meow-sic.mp3"></audio>
+            <audio id="audioPlayer3" src="happy birthday song.mp3"></audio>`;
+        setTimeout(() => {
+            document.getElementById("body").innerHTML = `
+                <h1>Happy Birthday Mom!</h1>
+                <p>Я тебя очень-очень люблю, а ещё ты можешь погладить кота, кликнув на него.</p>
+                <img id="cat" src="mom bd cat 2026.gif">
+                <audio id="audioPlayer1" src="Feline_Call.mp3"></audio>
+                <audio id="audioPlayer2" src="Meow-sic.mp3"></audio>
+                <audio id="audioPlayer3" src="happy birthday song.mp3"></audio>`;
+            const jsConfetti = new JSConfetti();
+            function Confetti() {
+                jsConfetti.addConfetti();
+            }
+            setInterval(Confetti, 2000);
+            let happyBdSong = document.getElementById("audioPlayer3");
+            for(let x=0;x<2;x++){
+                happyBdSong.play();
+            }
+            document.getElementById("cat").addEventListener("click", () => {
+                let soundId = Math.floor(Math.random() * 2);
+                let audioPlayer = document.getElementById(`audioPlayer${soundId + 1}`);
+                if (audioPlayer) {
+                    audioPlayer.play();
+                    
+                }
+            });
+        }, 1000);
+    });
+</script>
+</html>

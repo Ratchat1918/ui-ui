@@ -1,0 +1,24 @@
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+}
+img{
+    width: max(400px, 50vh);
+    cursor: pointer;  
+}
+.envelope:hover{
+    cursor: pointer;
+    opacity: 60%;
+}
+h1{
+    color: rgb(1, 120, 255);
+    font-size: clamp(5rem, 50vh, 20px);
+    font-family: url(yoster.ttf);
+}
+p{
+    color: rgb(1, 120, 255);
+}
