@@ -7,8 +7,7 @@ body{
     background-color: pink;
 }
 img{
-    width: max(300px, 30vh);
-    cursor: pointer;  
+    width: max(300px, 30vh);  
 }
 .envelope:hover{
     cursor: pointer;
@@ -16,9 +15,31 @@ img{
 }
 h1{
     color: rgb(1, 120, 255);
-    font-size: clamp(5rem, 50vh, 20px);
-    font-family: url(yoster.ttf);
+    font-size: clamp(3rem, 50vh, 20px);
+    text-align: center;
 }
 p{
+    font-size: medium;
     color: rgb(1, 120, 255);
+    text-align: center;
+}
+#otsikko{
+    width: 100%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#textDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#emblem{
+    width: 32em;
+}
+#eyes{
+    width: 28em;
+    border-radius: 5%;
 }

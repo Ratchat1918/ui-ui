@@ -4,17 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>You got mail</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body id="body">
-    <audio id="audioPlayer1" src="Feline_Call.mp3">
-    </audio>
-    <audio id="audioPlayer2">
-        <source src="Meow-sic.mp3" type="audio">
-    </audio>
     <audio id="audioPlayer3">
-        <source src="happy birthday song.mp3" type="audio">
+        <source src="" type="audio">
     </audio>
     <h1>You got mail</h1>
     <img class="envelope" id="image" src="envelope.png">
@@ -23,19 +18,22 @@
 <script>
     document.getElementById("image").addEventListener("click", () => {
         document.getElementById("body").innerHTML = `
-            <img src="mombd2026.gif">
-            <audio id="audioPlayer1" src="Feline_Call.mp3"></audio>
-            <audio id="audioPlayer2" src="Meow-sic.mp3"></audio>
-            <audio id="audioPlayer3" src="happy birthday song.mp3"></audio>`;
+            <img src="envelopeAnim.gif">
+            <audio id="audioPlayer3" src="aotsong.mp3"></audio>`;
         setTimeout(() => {
             document.getElementById("body").innerHTML = `
-                <h1>Happy Birthday Nikita!</h1>
-                <p>You are just one year away from hitting that unc status >:] </p>
-                <p>Also check your steam</p>
-                <img id="cat" src="mom bd cat 2026.gif">
-                <audio id="audioPlayer1" src="Feline_Call.mp3"></audio>
-                <audio id="audioPlayer2" src="Meow-sic.mp3"></audio>
-                <audio id="audioPlayer3" src="happy birthday song.mp3"></audio>`;
+                <div id="otsikko">
+                    <img id="embelm" src="emblem.png">
+                    <div id="textDiv">
+                        <h1>Happy Birthday!</h1>
+                        <p>最近、その「可愛さ」の術式が顕現した。術式の効果範囲に入った男は、例外なく彼女に心を奪われる</p>
+                        <p>――ただ一人を除いてな。もちろん、五条悟だ。</p>
+                        <p>この世界に生まれてきてくれてよかった, Anya</p>
+                    </div>
+                    <img id="embelm" src="emblem.png">
+                </div>
+                <img id="cat" src="bdAnim.gif">
+                <audio id="audioPlayer3" src="aotsong.mp3"></audio>`;
             const jsConfetti = new JSConfetti();
             function Confetti() {
                 jsConfetti.addConfetti();
