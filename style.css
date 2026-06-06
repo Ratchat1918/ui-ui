@@ -43,3 +43,48 @@ p{
     width: 28em;
     border-radius: 5%;
 }
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+    img {
+        width: min(90vw, 300px);
+    }
+    .envelope {
+        width: 80vw;
+    }
+    #otsikko {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    #emblem,
+    #eyes {
+        width: 90vw;
+    }
+    h1 {
+        font-size: clamp(2rem, 8vw, 3rem);
+    }
+    p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        justify-content: flex-start;
+        padding-top: 2rem;
+    }
+    #otsikko {
+        width: 100%;
+        padding: 0 1rem;
+    }
+    img {
+        width: 100%;
+        max-width: 320px;
+    }
+    #emblem,
+    #eyes {
+        width: 100%;
+    }
+}
